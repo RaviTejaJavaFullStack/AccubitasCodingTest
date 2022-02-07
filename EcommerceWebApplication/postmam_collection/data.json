@@ -1,0 +1,10 @@
+{
+    "name":"Redmi 9A",
+    "code": "MB12983SF",
+    "price": 10000.00,
+	"quantity": 1000,
+    "category":{
+        "id":386,
+        "categoryName":"ELECTRONICS"
+    }
+}

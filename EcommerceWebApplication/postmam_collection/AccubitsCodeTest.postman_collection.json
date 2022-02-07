@@ -1,0 +1,1381 @@
+{
+	"info": {
+		"_postman_id": "dbf29eac-013b-46b1-90ea-b6e9f0a61d38",
+		"name": "AccubitsCodeTest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"Rahul\",\r\n    \"password\": \"Rahul@1234\",\r\n    \"userRole\":[\r\n        \"USER\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"signup"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "signup",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\":\"Rahul\",\r\n    \"password\": \"Rahul@1234\",\r\n    \"userRole\":[\r\n        \"USER\"\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8090/signup",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"signup"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 06 Feb 2022 13:55:22 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"username\": \"Rahul\",\n    \"roles\": [\n        {\n            \"id\": 2,\n            \"name\": \"USER\",\n            \"description\": \"User role\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "admin_login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"Ramu\",\r\n    \"password\": \"Ramu@1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/token/generate-token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"token",
+								"generate-token"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\":\"Rahul\",\r\n    \"password\": \"Rahul@1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8090/token/generate-token",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"token",
+										"generate-token"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 06 Feb 2022 13:59:33 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJSYWh1bCIsInNjb3BlcyI6IlJPTEVfVVNFUiIsImlhdCI6MTY0NDE1NTk3MiwiZXhwIjoxNjQ0MTczOTcyfQ.7xVHTmZioJiC6P5l4wFYb2JyorOrrCJ7kzGdC7q7kAE\"\n}"
+						}
+					]
+				},
+				{
+					"name": "user_login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"Rahul\",\r\n    \"password\": \"Rahul@1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/token/generate-token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"token",
+								"generate-token"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\":\"Rahul\",\r\n    \"password\": \"Rahul@1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8090/token/generate-token",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"token",
+										"generate-token"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 06 Feb 2022 13:59:33 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJSYWh1bCIsInNjb3BlcyI6IlJPTEVfVVNFUiIsImlhdCI6MTY0NDE1NTk3MiwiZXhwIjoxNjQ0MTczOTcyfQ.7xVHTmZioJiC6P5l4wFYb2JyorOrrCJ7kzGdC7q7kAE\"\n}"
+						}
+					]
+				},
+				{
+					"name": "getAllUsers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJSYW11Iiwic2NvcGVzIjoiUk9MRV9BRE1JTiIsImlhdCI6MTY0NDE1NjUxNCwiZXhwIjoxNjQ0MTc0NTE0fQ.sj8AcFNypoBp8TCyrIRo7G8Fnlo_4DAU258grcdlMUY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getAllUsers",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8090/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 06 Feb 2022 14:08:51 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"username\": \"Ramu\",\n        \"roles\": [\n            {\n                \"id\": 1,\n                \"name\": \"ADMIN\",\n                \"description\": \"Admin role\"\n            }\n        ]\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "ProductAPI",
+			"item": [
+				{
+					"name": "getProduct",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJSYW11Iiwic2NvcGVzIjoiUk9MRV9BRE1JTiIsImlhdCI6MTY0NDE5NTQ3MiwiZXhwIjoxNjQ0MjEzNDcyfQ.sxgUge5g2DMIfA5dOoKTj_RyV6qlH4zEKRFRr3Kg308",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/product/getProduct/353",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"product",
+								"getProduct",
+								"353"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getProduct",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8090/api/product/getProduct/353",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"product",
+										"getProduct",
+										"353"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 07 Feb 2022 02:02:29 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 353,\n    \"name\": \"Redmi 9A\",\n    \"code\": \"MB12983SF\",\n    \"price\": 10000,\n    \"category\": {\n        \"id\": 1,\n        \"categoryName\": \"ELECTRONICS\"\n    },\n    \"image\": {\n        \"name\": \"353.jpg\",\n        \"originalFilename\": \"353.jpg\",\n        \"contentType\": \"img/jpeg\",\n        \"bytes\": \"/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxASDxANDg8PDw0PDg8NDQ4NDw8ODQ0OFREWFhURFRUYHSggGBsmGxYVITMhJSkrLjAvFx8zODMuNygwLisBCgoKDg0OGxAQGS0lHSUrKzctLSstLS0tLS0rLS0tLS0rLS03LSstLS0tLS0rLSstLS0tLS0tLS0tLS0uLTEtK//AABEIANkA6AMBIgACEQEDEQH/xAAcAAEAAQUBAQAAAAAAAAAAAAAABwECAwQFBgj/xABOEAACAgACBgQICQcJCQEAAAAAAQIDBBEFBhIhMVETMkFhByJScXKRscMUJjZzdYGSocEjM1RistLTFkJVVmV0gpTRFyU0RVNko+HwFf/EABoBAQADAQEBAAAAAAAAAAAAAAABAgMEBQb/xAApEQEAAgEDAwIGAwEAAAAAAAAAAQIRAxIxBCFBMmEFEyJRcbEUM9HB/9oADAMBAAIRAxEAPwCcQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAW2TUVm3kkak8a+xJL9bi/qRbi55zy7IZZJ8Np78/URx4Q/CFHAzWFogrcVKO3LabVdUHwcst8m/JWW7fnzrMzxDSKxEZlI6xkucfssr8Llzj9lkE6F8Ll8bUsZTW6XJKU8Opqda8rZlJqS7tzJowOIhbCNkdlqSUk474yi1mpLuaaZE5haIrPDfWKlzj6mXqyfOPqZouW/dF5c0ZqJ9nYRuTtjw2dufOPqZXbnzj6mEVRbKmIU2p84+pjanzj6n/AKlxQGFu3Z+o/Wi+q9N7LTjLk+3zPtKGK6OazXWW+L7UxlG1uAsqnnFS5pMvLKAAAAAAAAAAAAAAAAAAAAADmW9afnl7D5s8J+HnVpnESuT2Lujtqb4ShsRjln3OMkfSU+tP05ew42tGq2Ex1arxVUZpPOEt8Zwb4uMlvXsKROJy2mua4fMGPug8tiKjx3J557//AL1n0rqBhLKsBharc1ZDDUwmnxjLZz2X5k0vqOXoPwYaOw1qvhU52Qe1CV83bsPscYtJZ97TNjXbXWjRsIw2XZfYm66otJtLjOUnnsrPdwbb8zate++UUpsju9a1LPc8l7C6KyaXcv2kQ1o3wyy6RLFYbYqbyc6ZuyUFzcWvGXmaJb0fjYXQjbXJShKEZxlF5xlGTi1JPk0UmMLxMTw6uZZK+K4tHj/CJrnHR+HUox6XE3S6LDUrPOyzdm3lvyWazy3+NFdua8XRqnpvGJX6Q0tbhHPxlhcLtLYi9+zLYlGKa/xefMsiKzacQmP4RHmPhEeZEL8Gt39NaQ+1P98jzXajGYDGfBI6RxdsXVC2M5XWweUs1k/G5xYTfTtSMzD6h6ePMp06Pj2Wnsam08Zink8v+Juy/aH8oMZ+l4r/ADF/7wwy3Q+xsFYujjm0uPFpPizP0sfKj60fGL1gxv6Ziv8AMXfvHS1bxeNxWLownw/Fw6axQc1fdJxWTbeW1v3IlERmcQ+vOlj5UfWisbE+DT8zTITh4OL/AOmtIfbn++J6i6Vo/KYHTeIlZFZxqxTm65PvzlKPriMtp6a8eE3AjzwZa824ud2jtIV9DpPC7rYcFZFPLbS87WfFeNFrc90hksJgAAQAAAAAAAAAAAAAOVY/Hl3zkvuMePulCqVkIO2UY5xri8nMyXRzlNfrvLzmONrW6SfnSzRlPLoiOytE3KEZSi4SlFNwfGLfYz5+8MUJx0q5WZ7E8PT0TfDZWakl5pZ+s+gumjz+5nA1r1awekK1XiY5uLbrsjnG2uT4uMvVueaeRMTiS1cw+aMbOGT2Vk9uTW/+ZsxyXHjmpes+gvBVXZDRWFVue06c4p8VCV0pVr7O842i/BFgK7VZOV+JUWnGu1rom15SjFbXmzyJJowuzHhklwW7ll2d27IvqX3TlTT05ryjDWOPT60aNpnlKunDTxKi1mukUrpKXrhX9kkaSI7xrz1twf0dNfdeSRJFZl1aHE/lryPK646lYXSGxK5zrurWzC6lxUnDPPYkmmms233es9ZNGGSIy6tsWjEovfgcwv6XiPs1lr8D2F/S8R9mv/Qk2RjZOZI6bS+yNH4IML+lYj7NZ3tT9QcHgrvhEZWXXpONc7tnZqzWT2UlxabWbPVMxyIzLWvTaUd4h1YQM0Ymlo/E5+JLrfzX5Xd5zpJBhqZrOJRrpuPQa16Our8V4nDThclu23GNsU3z4Q+yiZiHNb3lrLoX5qz3hMZeHmavqkABLMAAAAAAAAAAAAAcyXXn6bKlkpePP02vUVTMp5dNeF6yKlmZUhZcWXy8Vlxjv6rJRhFuKXxtwf0dP2XklyiRpd8rcH9HT9l5J8olLziVtKcZas4mCcTclEwziIs6q2ackY5I2ZxMEkXdFZYZGORlkYpBtVgk2nmtzTzT7z0GBxCsgpdvCS5SOBNGfRGI2bdl9Wfi/wCLsf4fWWwa+nvpmOYeW1x+UuhfmrPeExkOa4fKXQvzVnvCYy0Pn9X1AAJZgAAAAAAAAAAAADjrrWfOT9pejGutZ85P2l6MZ5dVeFyKlpUJXGO9+Ky8x4jqsCMLvldg/o2f7N5KLRDetOKnVrLhLa3lOOATXan+ezTXIlXQ2loYivaj4s1l0lbebi+a5rvK6tZ5TSk7Zt4y3JIwzRsSMMzKJa1lqzRrzRtWI1rDWJdVJa8jDIyzZgnIvDprDHNmrZPLeuK3p8mZrJGldM0rDprDk60XKWsWg7OyVEpebPpM0TOmQPpG3a05oX9WF8fvsf4k7w4LzIPmeprt1LR7rgASwAAAAAAAAAAAAAHHaylZ85J/eXCzrz9NlDGeXVXhUqUKhKpZf1WXl9uHew23lu4CIJmI5QjrjH4xYZf2f+Nx38DfOqasrezJeprtT5o4utkfjLhl/Z/8Y7soGnh1dLP0THu9xovSUb4ZrdNdeHbF81zRsyIzx+m/gcfhCf5Rbq4f9SXkvu5nr9U9Z6cfT0kPEugkr6G85Vy5rnF9j/EwvpTEbvBbT2944daw1bTbsNO9kVaabUtZq2TMl9hz7rjWr0dOq62w0brC2241LbTorDaIcOyeen9FLkrPZM+gocF5l7D57UP9+6Jl5XSpfUpn0LBbl5kVty+a67+635/5CoAIcgAAAAAAAAAAAAA5FnXn6bAs68/TYMZ5dVeAqUAWXI3b+qzRM3SrZyfFFqyzvGUNayrPWjDL/sH747+JyinKTySTbb4JLizhawPPWjDP+z5e/NvWe/xVUv5++Xors+t+w0pTfaKw6ukrNvp93idO4iV9rseagvFrj5Mf9XxNPRePuwt0cRh5OFkPrjOPbCS7YvkdezD9xr2YTPsPSmlcbcdntxp1mNqXtV9ZKsdT0lfiWwyV9Lecqpc1zi+x/ibWLlkQvo6V+GujiMNLZsj2PfGcXxhJdqZIk9Za7cMr8nXNNRtqlxhPLsfan2P8c0eZqdNNLfTw5v400t7M2MxSRyrsWcXE6ZUnuZqvHZ9ppTTdsYh2Z4kwyuOZ8JNjAwldbXTHrWTjBdyb3v6lm/qN4rhO6GxfVs6Z0BnxlTZZ9uVrX3ZE9EL61QS1j0JGKyjGqUYrkl0iSJoOXOZy+U6i27UmfcAAYAAAAAAAAAAAAADkWdez02BZ17PTZQxnl1V4VBQBKpbbwZUtt4MJRHp1/GfC/R8vfmfSC27JS7M8l5luNXWOWWsmHfLR0vfnTVR3dLHNnf8ADq9rW93LeGLVg+47KoMteGOi1npZcenR3cdjDaJrshKm2O1XNZSXBrk0+xrmbtGF7jo4anIx7zKmpfthEesehLsFaoybnRNvobst0l5L5SXL6zSqxJOeO0XViKZYe+CnXNb12xfZKL7GuZDWtGrl2Bu2J5ypm26Lkso2R5PlJdq+s1mMOemrmcTyxwuPdeDbRzlOeMkvFhnVTn2za8aS8yyX+J8jwWhMBZib4YarrTe+WWca4LrTfcl+C7ScNH4SFFMKKllCuOyub5yfe3m35zDWviNseTVv22vEa1v4y6G+bn7bCaSEtZpZ6yaH9CftsJtOaHh6/rkABLEAAAAAAAAAAAAAcezr2emwLOvZ6bKGM8uqvCoACQst4MuLbeDCUPazfKTDfR798ejjWee1iXxlwv0e/fHqoQO/Qn6HpfD/AOufz/iyFRsV1F0IGeES8y7ZldVWblMTDWjaqRNXPeW1UizSei6cTTLD4iG3XNb+yUZdkovsa5mWs2IFpcN57vL6tarV4CEoqXSWWSblc47LlBPxYJdiS+/NnUtsOtKCayfA4ekapQeT4Pqy7H/7OLUpOcr6d989+Xg9PSz1j0P6M/eE5EEaWlnrFoj0Z+8J3KPP6mMakgAJc4AAAAAAAAAAAAA49v5yz037Cgt/OWem/YgjGeXVXgKlAEjLLeDLyy3gwlEenvlNhfo9++PXxieQ058psL/cJe+PZxR1aNvDv+Hz9No910UZYosRkiau6WWBs1mtA2K2Xq57tutmzBmpWzYgy8uO8M6Lb6Yzi4TWafrXehFl6ZnMMJzEol1hwcqtZdExbzTjNxlzX5T1MnEhzXb5S6F+bn7bCYzltGJc2tabWmZAAQyAAAAAAAAAAAAAHFs/OWem/YgLPzlvzj9iKGM8uqvC4FAEqll3BlxZdwYES6a+U+G/uEvfHs6zxmlvlPhv7hL2XHsnuZeLbZiXR0l9vf3ZUXoti81mXHW9TOWSLM0GYImSLLxLO0NuEjYhI0oSM8JGkOe9W3GRkUjVjIyRkRMMJqjrXV/GTQvzc/2rCZSF9c38ZNDfNz9thNBx39UvP1fUAAqzAAAAAAAAAAAAAHFta6SzLy9+fPJFBiI5X2LytmyPessn96BlPLqrxCoKAhZUst4MvLLeDAijScfjRhd6eej5Pd2br9zPYXI8XrFLodZNH3zyjVdRPDKT4dI3bFL12V+s9viETK+h5/LXru2Xv4dpurfvXBnKtZTDY5weT3w7V2rvRrp3x2l6VJnDsJF6LaZxmtqDTXd2dzMmydULTK6LMsZGFIvReJUmGdSMika6ZemXhlNXgNbd+smht6X5Oe98ONhNRB+l5fCNatH0V+N8Fo2rst+xJqyWT5dav7ROBxanrl5Wt65AAUYgAAAAAAAAAAAADT0hg9tKUWlZDqt8Gu2L7jlzs2d1kXW+9Zxfma4noDQ0r1Cs1yvW8w56uj5SK9LHmjUiXEbV/m+zZ6Vc0HYuaNYEbU/N9nlNfdWa8bTsSlsThLpKbVvdVmXHvT7V3LkeQw+mdOYePRX4FaQjBKMcRh5Nzml5Tjnn9cU+ZLLML4lohX5kxOYRXZrRpJrP/wDCxmT4P8tv/wDEa8tY9Iv/AJHjPVd/CJj7AhhpHVasef0h3D6z6UhLahobGJ9vi3NPzrot51Y6+6Sy36v4tvta6dJvzdCSaC8WmOEz1erPn9f4jP8Al7pH+r+M9d/8Efy+0j/V/F+u7+CSYCfmW+6P5Op9/wBI0/2gaR/q/i/tXfwSk9a9O4j8lg9Dyw9kt3SYhylsd6U1FZ+dPzEls3tE9Zk/Nv8AdE9RqT5eW8GWoM8E7MdjbOm0jiM3bN5vZzebSb7/AMORIZRFSjCZyAAIAAAAAH//2Q==\",\n        \"empty\": false,\n        \"size\": 4210,\n        \"inputStream\": {}\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "addProduct",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJSYW11Iiwic2NvcGVzIjoiUk9MRV9BRE1JTiIsImlhdCI6MTY0NDIxNDI3MiwiZXhwIjoxNjQ0MjMyMjcyfQ.u2HuB-3-di7FiM7GehC2pZFEWegXZkOOSVMI_W0ALTE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "imagefile",
+									"type": "file",
+									"src": "/C:/Users/Mahadev/Desktop/phone.jpg"
+								},
+								{
+									"key": "productDto",
+									"type": "file",
+									"src": "/C:/Users/Mahadev/Desktop/data.json"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/product/addProduct",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"product",
+								"addProduct"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getProducts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJSYW11Iiwic2NvcGVzIjoiUk9MRV9BRE1JTiIsImlhdCI6MTY0NDE5NTQ3MiwiZXhwIjoxNjQ0MjEzNDcyfQ.sxgUge5g2DMIfA5dOoKTj_RyV6qlH4zEKRFRr3Kg308",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/product/getAllProducts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"product",
+								"getAllProducts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateProduct",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJSYW11Iiwic2NvcGVzIjoiUk9MRV9BRE1JTiIsImlhdCI6MTY0NDE5NTQ3MiwiZXhwIjoxNjQ0MjEzNDcyfQ.sxgUge5g2DMIfA5dOoKTj_RyV6qlH4zEKRFRr3Kg308",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "imagefile",
+									"type": "file",
+									"src": "/C:/Users/Mahadev/Desktop/phone.jpg"
+								},
+								{
+									"key": "productDto",
+									"type": "file",
+									"src": "/C:/Users/Mahadev/Desktop/updateData.json"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/product/updateProduct",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"product",
+								"updateProduct"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "updateProduct",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "imagefile",
+											"type": "file",
+											"src": "/C:/Users/Mahadev/Desktop/phone.jpg"
+										},
+										{
+											"key": "productDto",
+											"type": "file",
+											"src": "/C:/Users/Mahadev/Desktop/updateData.json"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8090/api/product/updateProduct",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"product",
+										"updateProduct"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 07 Feb 2022 02:08:33 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 353,\n    \"name\": \"Redmi 8A\",\n    \"code\": \"MB12983SF\",\n    \"price\": 8000,\n    \"category\": {\n        \"id\": 1,\n        \"categoryName\": \"ELECTRONICS\"\n    },\n    \"image\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "deleteProduct",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJSYW11Iiwic2NvcGVzIjoiUk9MRV9BRE1JTiIsImlhdCI6MTY0NDE5NTQ3MiwiZXhwIjoxNjQ0MjEzNDcyfQ.sxgUge5g2DMIfA5dOoKTj_RyV6qlH4zEKRFRr3Kg308",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/product/deleteProduct/353",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"product",
+								"deleteProduct",
+								"353"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "deleteProduct",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8090/api/product/deleteProduct/353",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"product",
+										"deleteProduct",
+										"353"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "28"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 07 Feb 2022 02:12:53 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "Product Deleted Successfully"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "CategoryAPI",
+			"item": [
+				{
+					"name": "addCategory",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJSYW11Iiwic2NvcGVzIjoiUk9MRV9BRE1JTiIsImlhdCI6MTY0NDIxMjcyMiwiZXhwIjoxNjQ0MjMwNzIyfQ.MeXYREFa-Pz5bRVAKnnw6i9ODGKjTgIxCgP0BLECkBg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"categoryName\":\"ELECTRONICS\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/category/addCategory",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"category",
+								"addCategory"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "addCategory",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"categoryName\":\"MEDICINES\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8090/api/category/addCategory",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"category",
+										"addCategory"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 06 Feb 2022 15:13:49 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"categoryName\": \"MEDICINES\",\n    \"products\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "updateCategory",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJSYW11Iiwic2NvcGVzIjoiUk9MRV9BRE1JTiIsImlhdCI6MTY0NDE5NTQ3MiwiZXhwIjoxNjQ0MjEzNDcyfQ.sxgUge5g2DMIfA5dOoKTj_RyV6qlH4zEKRFRr3Kg308",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 2,\r\n    \"categoryName\": \"HOMEO MEDICINES\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/category/updateCategory",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"category",
+								"updateCategory"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "updateCategory",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 2,\r\n    \"categoryName\": \"HOMEO MEDICINES\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8090/api/category/updateCategory",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"category",
+										"updateCategory"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 07 Feb 2022 02:37:09 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"categoryName\": \"HOMEO MEDICINES\"\n}"
+						}
+					]
+				},
+				{
+					"name": "getAllCategories",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJSYW11Iiwic2NvcGVzIjoiUk9MRV9BRE1JTiIsImlhdCI6MTY0NDE5NTQ3MiwiZXhwIjoxNjQ0MjEzNDcyfQ.sxgUge5g2DMIfA5dOoKTj_RyV6qlH4zEKRFRr3Kg308",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/category/getAllCategories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"category",
+								"getAllCategories"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getAllCategories",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8090/api/category/getAllCategories",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"category",
+										"getAllCategories"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 07 Feb 2022 02:40:44 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"categoryName\": \"ELECTRONICS\"\n    },\n    {\n        \"id\": 2,\n        \"categoryName\": \"HOMEO MEDICINES\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "getCategory",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJSYW11Iiwic2NvcGVzIjoiUk9MRV9BRE1JTiIsImlhdCI6MTY0NDE5NTQ3MiwiZXhwIjoxNjQ0MjEzNDcyfQ.sxgUge5g2DMIfA5dOoKTj_RyV6qlH4zEKRFRr3Kg308",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/category/getCategory/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"category",
+								"getCategory",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getCategory",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8090/api/category/getCategory/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"category",
+										"getCategory",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 07 Feb 2022 02:41:59 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"categoryName\": \"ELECTRONICS\"\n}"
+						}
+					]
+				},
+				{
+					"name": "deleteCategory",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJSYW11Iiwic2NvcGVzIjoiUk9MRV9BRE1JTiIsImlhdCI6MTY0NDE5NTQ3MiwiZXhwIjoxNjQ0MjEzNDcyfQ.sxgUge5g2DMIfA5dOoKTj_RyV6qlH4zEKRFRr3Kg308",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/category/deleteCategory/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"category",
+								"deleteCategory",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "deleteCategory",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8090/api/category/deleteCategory/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"category",
+										"deleteCategory",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "28"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 07 Feb 2022 02:43:10 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "Product Deleted Successfully"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "CartItemAPI",
+			"item": [
+				{
+					"name": "addToCart",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJSYWh1bCIsInNjb3BlcyI6IlJPTEVfVVNFUiIsImlhdCI6MTY0NDIxMjg4NCwiZXhwIjoxNjQ0MjMwODg0fQ.PaX5kerKAfrKpJo_7f43i_ygnvfvrWY7z4rDdB3yqSg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/cart/addToCart/641?requestedQuantity=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"cart",
+								"addToCart",
+								"641"
+							],
+							"query": [
+								{
+									"key": "requestedQuantity",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

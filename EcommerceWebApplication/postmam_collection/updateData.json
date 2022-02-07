@@ -1,0 +1,10 @@
+{
+	"id": 353,
+    "name":"Redmi 8A",
+    "code": "MB12983SF",
+    "price": 8000.00,
+    "category":{
+        "id":1,
+        "categoryName":"ELECTRONICS"
+    }
+}
