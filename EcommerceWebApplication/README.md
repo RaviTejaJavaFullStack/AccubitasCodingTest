@@ -9,6 +9,7 @@ The example uses maven as a build tool and also sample script to run on applicat
  2. JWT (0.6.0)
  3. H2 Database
  4. Java 1.8
+ 5. Swagger UI Docs (2.8.0)
  
  
 ## Module Involved
@@ -55,3 +56,5 @@ REST service for an e-commerce system with the following functionalities
     - User should be able to retrieve the cart items and total amount
 
 
+1. Swagger URL: http://localhost:8090/AccubitsRestWS/swagger-ui.html#/
+2. H2 DB Console URL: http://localhost:8090/AccubitsRestWS/h2-console/

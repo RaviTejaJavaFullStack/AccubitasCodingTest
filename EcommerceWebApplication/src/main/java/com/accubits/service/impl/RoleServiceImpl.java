@@ -22,4 +22,9 @@ public class RoleServiceImpl implements RoleService {
 		return roleDao.findByNameIn(roleName);
 	}
 
+	@Override
+	public List<Role> findAll() {
+		return roleDao.findAll();
+	}
+
 }

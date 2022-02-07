@@ -13,6 +13,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -103,7 +105,7 @@ public class CartItemController {
 	}
 
 	@PreAuthorize("hasRole('USER')")
-	@RequestMapping(value = "/getCart")
+	@GetMapping(value = "/getCart")
 	public ResponseEntity<?> getCart(@AuthenticationPrincipal Principal principal, HttpSession session) {
 		try {
 			String username = principal.getName();
@@ -115,7 +117,7 @@ public class CartItemController {
 	}
 
 	@PreAuthorize("hasRole('USER')")
-	@RequestMapping(value = "/removeCartItem/{cartId}")
+	@GetMapping(value = "/removeCartItem/{cartId}")
 	public ResponseEntity<?> removeCartItem(@PathVariable long cartId) {
 		try {
 			cartItemService.removeCartItem(cartId);
@@ -126,7 +128,7 @@ public class CartItemController {
 	}
 
 	@PreAuthorize("hasRole('USER')")
-	@RequestMapping(value = "/clearCart")
+	@GetMapping(value = "/clearCart")
 	public ResponseEntity<?> clearCart(@AuthenticationPrincipal Principal principal) {
 		try {
 			List<CartItem> cartItems = cartItemService.getCart(principal.getName());

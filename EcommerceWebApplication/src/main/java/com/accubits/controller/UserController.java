@@ -11,8 +11,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.accubits.model.Role;
 import com.accubits.model.User;
 import com.accubits.model.UserDto;
+import com.accubits.service.RoleService;
 import com.accubits.service.UserService;
 
 @CrossOrigin(origins = "*", maxAge = 3600)
@@ -22,12 +24,21 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    @Autowired
+    private RoleService roleService;
+    
     @PreAuthorize("hasRole('ADMIN')")
     @RequestMapping(value="/users", method = RequestMethod.GET)
     public List<User> listUser(){
         return userService.findAll();
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
+    @RequestMapping(value="/users", method = RequestMethod.GET)
+    public List<Role> listRoles(){
+        return roleService.findAll();
+    }
+    
     @PreAuthorize("hasRole('USER')")
     @RequestMapping(value = "/users/{id}", method = RequestMethod.GET)
     public User getOne(@PathVariable(value = "id") Long id){

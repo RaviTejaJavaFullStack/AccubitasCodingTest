@@ -8,4 +8,6 @@ import com.accubits.model.Role;
 public interface RoleService {
 
 	public Set<Role> findByName(List<String> roleName);
+
+	public List<Role> findAll();
 }
