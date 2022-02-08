@@ -67,8 +67,7 @@ public class Category {
 		if (getClass() != obj.getClass())
 			return false;
 		Category other = (Category) obj;
-		return Objects.equals(categoryName, other.categoryName) && id == other.id
-				&& Objects.equals(products, other.products);
+		return Objects.equals(categoryName, other.categoryName) && id == other.id;
 	}
 
 	@Override

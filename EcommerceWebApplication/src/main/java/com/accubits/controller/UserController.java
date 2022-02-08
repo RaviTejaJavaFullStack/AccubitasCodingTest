@@ -34,7 +34,7 @@ public class UserController {
     }
 
     @PreAuthorize("hasRole('ADMIN')")
-    @RequestMapping(value="/users", method = RequestMethod.GET)
+    @RequestMapping(value="/roles", method = RequestMethod.GET)
     public List<Role> listRoles(){
         return roleService.findAll();
     }
